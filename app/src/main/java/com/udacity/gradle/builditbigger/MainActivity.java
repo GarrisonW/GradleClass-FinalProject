@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -55,8 +56,9 @@ public class MainActivity extends ActionBarActivity {
 
     public void launchJokeApp(View view) {
         Intent intent = new Intent(this, JokerMainActivity.class);
-        intent.putExtra(JOKE_STRING, "My Joke is Funnier");
-        startActivity(intent);
+        //intent.putExtra(JOKE_STRING, "My Joke is Funnier");
+        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
+        //startActivity(intent);
 
     }
 
