@@ -48,18 +48,19 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view){
+    public void launchJavaJoke(View view){
         Joker joker = new Joker();
         String joke  = joker.getJoke();
         Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
     }
 
-    public void launchJokeApp(View view) {
+    public void launchAppJoke(View view) {
         Intent intent = new Intent(this, JokerMainActivity.class);
-        //intent.putExtra(JOKE_STRING, "My Joke is Funnier");
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
-        //startActivity(intent);
+        intent.putExtra(JOKE_STRING, "My Joke is Funnier");
+    }
 
+    public void launchGTEJoke(View view) {
+        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
     }
 
 }

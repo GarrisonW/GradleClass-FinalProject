@@ -4,4 +4,8 @@
     <string name="button_text">Tell Joke</string>
     <string name="action_settings">Settings</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="app_sample_string">Get a joke using an application module</string>
+    <string name="java_sample_string">Get a joke using a java module</string>
+    <string name="gce_sample_string">Get a joke using a Google Cloud endpoint</string>
 </resources>
