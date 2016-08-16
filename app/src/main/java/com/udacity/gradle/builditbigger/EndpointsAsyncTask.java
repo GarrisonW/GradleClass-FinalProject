@@ -15,6 +15,7 @@ import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 import java.io.IOException;
 
 class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> {
+
     private static MyApi myApiService = null;
     private Context context;
 
@@ -39,10 +40,11 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
         }
 
         context = params[0].first;
-        String name = params[0].second;
+        //String name = params[0].second;
 
         try {
-            return myApiService.sayHi(name).execute().getData();
+            return myApiService.sayHi().execute().getData();
+            //return myApiService.sayHi(name).execute().getData();
         } catch (IOException e) {
             return e.getMessage();
         }
