@@ -14,11 +14,15 @@ import android.widget.Toast;
 
 import com.example.Joker;
 
+import java.util.concurrent.ExecutionException;
+
 import garrison.com.jokerapp.JokerMainActivity;
 
 public class MainActivity extends ActionBarActivity {
 
     public static final String JOKE_STRING = "joke_string";
+    String myJoke = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +65,23 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void launchGTEJoke(View view) {
-       new EndpointsAsyncTask().execute(new Pair<Context, String>(this, null));
-       // new EndpointsAsyncTask().execute(this);
+        String result = "";
+        EndpointsAsyncTask endpointAsyncTask = (EndpointsAsyncTask) new EndpointsAsyncTask().execute(new Pair<Context, String>(this, null));
+        try {
+            result = endpointAsyncTask.get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        Toast.makeText(this, result, Toast.LENGTH_LONG).show();
+
+    }
+
+    public void setJoke(String joke) {
+        myJoke = joke;
+        Toast.makeText(this, joke, Toast.LENGTH_LONG).show();
     }
 
 }

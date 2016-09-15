@@ -19,6 +19,13 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
     private static MyApi myApiService = null;
     private Context context;
 
+    /*
+    MainActivity callingApp;
+
+    public EndpointsAsyncTask (MainActivity app) {
+        callingApp = app;
+    }
+*/
     @Override
     protected String doInBackground(Pair<Context, String>... params) {
         if(myApiService == null) {  // Only do this once
@@ -40,11 +47,9 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
         }
 
         context = params[0].first;
-        //String name = params[0].second;
 
         try {
             return myApiService.sayHi().execute().getData();
-            //return myApiService.sayHi(name).execute().getData();
         } catch (IOException e) {
             return e.getMessage();
         }
@@ -52,6 +57,6 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
 
     @Override
     protected void onPostExecute(String result) {
-        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+        //callingApp.setJoke(result);
     }
 }
