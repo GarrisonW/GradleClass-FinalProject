@@ -29,8 +29,8 @@ public class MyEndpoint {
     //public MyBean sayHi(@Named("name") String name) {
     public MyBean sayHi() {
         MyBean response = new MyBean();
+        //response.setData("");
         response.setData("Five-fourths of people admit that they are bad with fractions.");
-
         return response;
     }
 
