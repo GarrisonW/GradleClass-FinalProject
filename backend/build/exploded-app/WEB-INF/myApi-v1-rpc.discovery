@@ -1,6 +1,6 @@
 {
  "kind": "discovery#rpcDescription",
- "etag": "\"zRMgE0l9nVDW4S28VYYcYQF9UW4/NIQCbhWc0TbBRIG-SdGvjuV-xA8\"",
+ "etag": "\"zRMgE0l9nVDW4S28VYYcYQF9UW4/NVT4bRO5HgDihwlt4xEMvlMnan0\"",
  "discoveryVersion": "v1",
  "id": "myApi:v1",
  "name": "myApi",
@@ -84,15 +84,6 @@
  "methods": {
   "myApi.sayHi": {
    "id": "myApi.sayHi",
-   "parameters": {
-    "name": {
-     "type": "string",
-     "required": true
-    }
-   },
-   "parameterOrder": [
-    "name"
-   ],
    "returns": {
     "$ref": "MyBean"
    },
