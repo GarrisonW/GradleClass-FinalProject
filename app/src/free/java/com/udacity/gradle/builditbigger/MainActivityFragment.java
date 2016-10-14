@@ -1,19 +1,14 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Intent;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
-import com.example.Joker;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-
-import garrison.com.jokerapp.JokerMainActivity;
 
 /**
  * A placeholder fragment containing a simple view.
