@@ -18,7 +18,7 @@ public class JokerMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joker_main);
 
-        mJoke = getIntent().getStringExtra(JOKE_STRING).toString();
+        mJoke = getIntent().getStringExtra(JOKE_STRING);
         TextView joke_textView = (TextView) findViewById(R.id.mod_text_view);
         joke_textView.setText(mJoke);
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
