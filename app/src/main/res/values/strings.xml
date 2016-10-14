@@ -8,4 +8,6 @@
     <string name="app_sample_string">Get a joke using an application module</string>
     <string name="java_sample_string">Get a joke using a java module</string>
     <string name="gce_sample_string">Get a joke using a Google Cloud endpoint</string>
+
+    <string name="app_joke">I had a dream that I was a muffler last night. I woke up exhausted.</string>
 </resources>
