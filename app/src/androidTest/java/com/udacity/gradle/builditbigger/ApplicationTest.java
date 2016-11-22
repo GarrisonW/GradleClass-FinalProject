@@ -1,20 +1,24 @@
 package com.udacity.gradle.builditbigger;
 
 
-import android.test.AndroidTestCase;
+import android.app.Application;
+import android.test.ApplicationTestCase;
 
 
-public class ApplicationTest extends AndroidTestCase {
-/*
-    public void testVerifyEchoResponse() {
-        assertEquals("hello", "hello");
+public class ApplicationTest extends ApplicationTestCase<Application> {
+    /*
+        public void testVerifyEchoResponse() {
+            assertEquals("hello", "hello");
+        }
+    */
+    public ApplicationTest() {
+        super(Application.class);
     }
-*/
 
     public void testAsyncNotBlankResponse() {
         String result = "";
 
-        assertEquals("d", "d");
+        assertEquals("d", "a");
 /*
         EndpointsAsyncTask endpointsAsyncTask = (EndpointsAsyncTask) new EndpointsAsyncTask().execute(new Pair<Context, String>(getContext(), null));
 
